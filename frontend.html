@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Review Rating Predictor</title>
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background-color:#f4f6f8;
+    text-align:center;
+    margin-top:80px;
+}
+h2{
+    color:#333;
+}
+form{
+    background:white;
+    padding:20px;
+    width:350px;
+    margin:auto;
+    border-radius:8px;
+    box-shadow:0px 4px 10px rgba(0,0,0,0.1);
+}
+textarea{
+    width:90%;
+    padding:10px;
+    border-radius:5px;
+    border:1px solid #ccc;
+    font-size:14px;
+}
+button{
+    background-color:#4CAF50;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:5px;
+    font-size:16px;
+    cursor:pointer;
+}
+button:hover{
+    background-color:#45a049;
+}
+h3{
+    color:#555;
+}
+p{
+    font-size:16px;
+}
+</style>
+</head>
+<body>
+<h2>Enter Product Review</h2>
+<form method="POST">
+<textarea name="review" rows="5" cols="40"></textarea>
+<br><br>
+<button type="submit">Predict Rating</button>
+</form>
+{% if rating %}
+<h3>Review:</h3>
+<p>{{review}}</p>
+<h2>Predicted Rating: {{rating}} / 5</h2>
+{% endif %}
+</body>
+</html>
